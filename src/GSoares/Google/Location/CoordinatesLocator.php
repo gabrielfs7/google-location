@@ -30,7 +30,7 @@ class CoordinatesLocator extends AbstractLocatorBuilder
         LocatorInterface $locator = null,
         CoordinatesFactoryInterface $coordinatesFactory = null
     ) {
-        $this->locator = $locator ?: new ApiLocator();
+        $this->locator = $locator ?: new HtmlLocator();
         $this->coordinatesFactory = $coordinatesFactory ?: new CoordinatesApiFactory();
     }
 
