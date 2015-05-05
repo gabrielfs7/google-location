@@ -14,6 +14,8 @@ $coordinates = (new \GSoares\Google\Location\CoordinatesLocator())
     ->setCountry('Brasil')
     ->locate();
     
+//OR using single parameters...
+
 $coordinates = (new \GSoares\Google\Location\CoordinatesLocator())
     ->setPostcode('88117030')
     ->locate();
