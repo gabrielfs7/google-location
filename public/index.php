@@ -12,8 +12,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $locator = new \GSoares\Google\Location\CoordinatesLocator();
-    $coordinates = $locator->setStreet($_POST['street'])
+    $coordinates = (new \GSoares\Google\Location\CoordinatesLocator())
+        ->setStreet($_POST['street'])
         ->setNumber($_POST['number'])
         ->setDistrict($_POST['district'])
         ->setCity($_POST['city'])

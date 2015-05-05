@@ -2,7 +2,6 @@
 namespace GSoares\Google\Location;
 
 use GSoares\Google\Location\Address\Coordinates;
-use GSoares\Google\Location\Factory\CoordinatesApiFactory;
 use GSoares\Google\Location\Factory\CoordinatesFactoryInterface;
 use GSoares\Google\Location\Factory\CoordinatesHtmlFactory;
 
