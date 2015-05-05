@@ -55,7 +55,7 @@ foreach ($array as $arr) {
     <p>
         <label><?php echo ucfirst($arr) ?>:</label>
         <br/>
-        <input type="text" name="<?php echo $arr ?>">
+        <input type="text" value="<?php echo isset($_POST[$arr]) ? $_POST[$arr] : null ?>" name="<?php echo $arr ?>">
     </p>
 <?php } ?>
 <input type="submit">

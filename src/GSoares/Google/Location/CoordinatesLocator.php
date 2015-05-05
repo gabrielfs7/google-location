@@ -4,6 +4,7 @@ namespace GSoares\Google\Location;
 use GSoares\Google\Location\Address\Coordinates;
 use GSoares\Google\Location\Factory\CoordinatesApiFactory;
 use GSoares\Google\Location\Factory\CoordinatesFactoryInterface;
+use GSoares\Google\Location\Factory\CoordinatesHtmlFactory;
 
 /**
  * @package GSoares\Google\Location
@@ -31,7 +32,7 @@ class CoordinatesLocator extends AbstractLocatorBuilder
         CoordinatesFactoryInterface $coordinatesFactory = null
     ) {
         $this->locator = $locator ?: new HtmlLocator();
-        $this->coordinatesFactory = $coordinatesFactory ?: new CoordinatesApiFactory();
+        $this->coordinatesFactory = $coordinatesFactory ?: new CoordinatesHtmlFactory();
     }
 
     /**
