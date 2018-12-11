@@ -44,6 +44,15 @@ class HtmlLocator implements LocatorInterface
             1
         );
 
+        if (!$coordinates) {
+            try {
+                preg_match('/(center\=)(.){0,100}(zoom)/', $response, $matches);
+                $url_coordinates = str_replace(['center=', '&amp;zoom'], '', reset($matches));
+                $coordinates = explode('%2C', $url_coordinates);
+            } catch (\Exception $e) {
+            }
+        }
+
         if ($coordinates) {
             return $coordinates;
         }
